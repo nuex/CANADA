@@ -1,3 +1,0 @@
-[submodule "vendor/plugins/mail_style"]
-	path = vendor/plugins/mail_style
-	url = git://github.com/purify/mail_style.git
