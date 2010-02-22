@@ -27,7 +27,7 @@
               = event.title
             = "@ " + event.location.title + " (" + event.location.address + ")" if event.location
             = " - " + event.time_string if event.time_string
-    - unless @announcements.count.zero?
+    - unless @announcements.size.zero?
       .section
         .section_header
           ANNOUNCEMENTS
@@ -38,7 +38,7 @@
                 = (i + 1).to_s + ") " + announcement.title
               %br
               = announcement.description
-    - unless @hacks.count.zero?
+    - unless @hacks.size.zero?
       .section
         .section_header
           HACKS OF THE WEEK
@@ -49,7 +49,7 @@
                 = hack.title
               %br
               = hack.description
-    - unless @resources.count.zero?
+    - unless @resources.size.zero?
       .section
         .section_header
           RESOURCES
