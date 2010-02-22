@@ -1,8 +1,6 @@
 class ApplicationMailer < ActionMailer::Base
   
-  ActionMailer::Base.default_url_options[:host] = "canada.nikolaiwarner.com"
-  
-  
+  ActionMailer::Base.default_url_options[:host] = "collexion.net"
 
   def send_weekly_newsletter(content)
     css :email

@@ -1,0 +1,26 @@
+<%= render :partial => 'admin/shared/nav' %>
+
+<h1>Listing resources</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Link</th>
+  </tr>
+
+<% @resources.each do |resource| %>
+  <tr>
+    <td><%=h resource.title %></td>
+    <td><%=h resource.description %></td>
+    <td><%=h resource.link %></td>
+    <td><%= link_to 'Show', [:admin, :canada, resource] %></td>
+    <td><%= link_to 'Edit', edit_admin_canada_resource_path(resource) %></td>
+    <td><%= link_to 'Destroy', [:admin, :canada, resource], :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New resource', new_admin_canada_resource_path %>

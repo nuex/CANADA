@@ -2,8 +2,6 @@ class Event < ActiveRecord::Base
 
   belongs_to :location
 
-
-
   def time_string
     if start_datetime
       if end_datetime
@@ -19,8 +17,5 @@ class Event < ActiveRecord::Base
       nil
     end  
   end
-
-
-
 
 end

@@ -1,0 +1,32 @@
+<%= render :partial => 'admin/shared/nav' %>
+
+<p>
+  <b>Start datetime:</b>
+  <%=h @event.start_datetime %>
+</p>
+
+<p>
+  <b>End datetime:</b>
+  <%=h @event.end_datetime %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%=h @event.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @event.description %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%=h @event.location.title if @event.location %>
+</p>
+
+
+
+
+<%= link_to 'Edit', edit_admin_canada_event_path(@event) %> |
+<%= link_to 'Back', admin_canada_events_path %>

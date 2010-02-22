@@ -1,0 +1,26 @@
+<%= render :partial => 'admin/shared/nav' %>
+
+<h1>Editing location</h1>
+
+<% form_for([:admin, :canada, @location]) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :address %><br />
+    <%= f.text_area :address %>
+  </p>
+  <p>
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', [:admin, :canada, @location] %> |
+<%= link_to 'Back', admin_canada_locations_path %>

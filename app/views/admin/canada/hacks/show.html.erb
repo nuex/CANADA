@@ -1,0 +1,15 @@
+<%= render :partial => 'admin/shared/nav' %>
+
+<p>
+  <b>Title:</b>
+  <%=h @hack.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @hack.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_admin_canada_hack_path(@hack) %> |
+<%= link_to 'Back', admin_canada_hacks_path %>

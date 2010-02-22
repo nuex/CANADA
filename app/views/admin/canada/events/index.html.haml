@@ -1,0 +1,14 @@
+= render :partial => 'admin/shared/nav'
+
+%h1 Events
+
+- @events.each do |event|
+  %div= h event.time_string
+  %div= h event.title
+  %div= h event.description
+  %div= h event.location.title if event.location
+  %div=  link_to 'Show', [:admin, :canada, event]
+  %div=  link_to 'Edit', edit_admin_canada_event_path(event)
+  %div=  link_to 'Destroy', [:admin, :canada, event], :confirm => 'Are you sure?', :method => :delete
+
+= link_to 'New event', new_admin_canada_event_path
